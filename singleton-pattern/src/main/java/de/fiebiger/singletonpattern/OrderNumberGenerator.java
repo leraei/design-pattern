@@ -7,7 +7,7 @@ package de.fiebiger.singletonpattern;
  */
 public final class OrderNumberGenerator {
 
-	private static OrderNumberGenerator instance = new OrderNumberGenerator();
+	private static OrderNumberGenerator instance;
 
 	private int orderNumber;
 
