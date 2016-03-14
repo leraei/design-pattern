@@ -9,5 +9,6 @@
   <modules>
     <module>factory-pattern</module>
     <module>singleton-pattern</module>
+    <module>multiton-pattern</module>
   </modules>
 </project>
