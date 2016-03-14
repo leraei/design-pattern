@@ -20,8 +20,12 @@ public class OrderNumberGeneratorTest {
 		OrderNumberGenerator orderNumberGenerator = OrderNumberGenerator.getInstance();
 		int firstOrder = orderNumberGenerator.generateNewOrderNumber();
 		assertThat(firstOrder, is(1));
+
+		orderNumberGenerator = OrderNumberGenerator.getInstance();
 		int secondOrder = orderNumberGenerator.generateNewOrderNumber();
 		assertThat(secondOrder, is(2));
+
+		orderNumberGenerator = OrderNumberGenerator.getInstance();
 		int thirdOrder = orderNumberGenerator.generateNewOrderNumber();
 		assertThat(thirdOrder, is(3));
 	}
