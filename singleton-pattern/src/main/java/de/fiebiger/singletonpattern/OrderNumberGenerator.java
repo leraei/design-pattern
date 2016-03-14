@@ -1,10 +1,11 @@
 package de.fiebiger.singletonpattern;
 
 /**
- * Singleton class for creating new orderNumbers
+ * Singleton class for creating new orderNumbers.
+ * Note: This class is final to be safe against inheritance
  * Created by tfiebige on 14.03.16.
  */
-public class OrderNumberGenerator {
+public final class OrderNumberGenerator {
 
 	private static OrderNumberGenerator instance = new OrderNumberGenerator();
 
