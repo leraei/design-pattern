@@ -10,6 +10,7 @@ public final class Planets {
     private static HashMap<PlanetName, Planet> instances = new HashMap<PlanetName, Planet>();
 
     private static boolean initialized = false;
+
     /**
      * The multiton pattern needs the constructor to be private. All planets of our SolarSystem will be created when
      * this class gets intialized.
@@ -17,6 +18,10 @@ public final class Planets {
     private Planets() {
     }
 
+    /**
+     * This method gets called when the instance is used the first time. It initializes
+     * all nine planets of our solar system.
+     */
     private static void init() {
         instances.put(PlanetName.MERCURY, new Planet(PlanetName.MERCURY, 100, 100, 1.0));
         instances.put(PlanetName.VENUS, new Planet(PlanetName.VENUS, 100, 100, 1.0));
@@ -36,7 +41,7 @@ public final class Planets {
      * @return the singleton instance of a planet
      */
     public static Planet getInstanceOf(PlanetName planetName) {
-        if(!initialized) {
+        if (!initialized) {
             init();
         }
         return instances.get(planetName);
