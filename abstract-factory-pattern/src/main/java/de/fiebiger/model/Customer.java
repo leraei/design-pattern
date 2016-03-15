@@ -6,6 +6,9 @@ package de.fiebiger.model;
 public abstract class Customer {
 	private String email;
 
+	public Customer(String email) {
+		this.email = email;
+	}
 
 	public String getEmail() {
 		return email;

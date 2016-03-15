@@ -7,13 +7,13 @@ public abstract class Product {
 	private String articleNumber;
 	private String name;
 
-	abstract String generateArticleNumber();
-
-
 	public Product(String name) {
 		this.name = name;
 		this.articleNumber = generateArticleNumber();
 	}
+
+
+	abstract String generateArticleNumber();
 
 
 	public String getArticleNumber() {

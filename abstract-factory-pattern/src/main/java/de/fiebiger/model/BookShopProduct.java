@@ -20,6 +20,6 @@ public class BookShopProduct extends Product {
 
 
 	private String getNextIdFromDatabase() {
-		return String.valueOf(Math.random());
+		return String.valueOf((int)(Math.random() * 100));
 	}
 }

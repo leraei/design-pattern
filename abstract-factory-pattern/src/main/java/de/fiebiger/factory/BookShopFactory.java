@@ -12,12 +12,12 @@ import de.fiebiger.model.Product;
  */
 public class BookShopFactory extends WebshopFactory {
 
-	@Override public Customer createCustomer() {
-		return new BookShopCustomer();
+	@Override public Customer createCustomer(String email) {
+		return new BookShopCustomer(email);
 	}
 
 
-	@Override public Product createProduct() {
-		return new BookShopProduct();
+	@Override public Product createProduct(String name) {
+		return new BookShopProduct(name);
 	}
 }

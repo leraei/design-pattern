@@ -5,4 +5,7 @@ package de.fiebiger.model;
  */
 public class SupplyShopCustomer extends Customer {
 
+    public SupplyShopCustomer(String email) {
+        super(email);
+    }
 }
