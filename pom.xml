@@ -10,5 +10,6 @@
     <module>factory-pattern</module>
     <module>singleton-pattern</module>
     <module>multiton-pattern</module>
+    <module>abstract-factory-pattern</module>
   </modules>
 </project>
