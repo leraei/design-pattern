@@ -37,7 +37,7 @@ public class ForrestTest {
 		Forrest forrest = new Forrest();
 		forrest.addFlowersToForrest(FlowerType.SONNENBLUME, 2);
 
-		assertThat(forrest.getTrees().size(), is(2));
+		assertThat(forrest.getFlowers().size(), is(2));
 	}
 
 }
