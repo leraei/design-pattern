@@ -9,10 +9,13 @@ public class Tree extends Plant {
 	private int height;
 
 
-	public Tree(TreeType type) {
+	private Tree(TreeType type) {
 		this.type = type;
 	}
 
+	public static Tree createPrototype(TreeType treeType) {
+		return new Tree(treeType);
+	}
 
 	@Override public Tree clone() {
 		return (Tree)super.clone();

@@ -10,9 +10,11 @@ import static org.hamcrest.core.Is.is;
 
 
 /**
+ * Test a forrest with all of its functionalities
  * Created by tfiebige on 17.03.16.
  */
 public class ForrestTest {
+
 	@Test
 	public void testPreparePrototypes() {
 		Forrest forrest = new Forrest();
@@ -24,6 +26,7 @@ public class ForrestTest {
 		}
 	}
 
+
 	@Test
 	public void testAddTreesToForrest() {
 		Forrest forrest = new Forrest();
@@ -31,6 +34,7 @@ public class ForrestTest {
 
 		assertThat(forrest.getTrees().size(), is(2));
 	}
+
 
 	@Test
 	public void testAddFlowersToForrest() {

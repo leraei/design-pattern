@@ -12,6 +12,7 @@ import java.util.Set;
 
 
 /**
+ * This class representates a Forest. When it is initialized prototypes of all possible Trees and Flowers will be created.
  * Created by tfiebige on 17.03.16.
  */
 public class Forrest {
@@ -19,31 +20,46 @@ public class Forrest {
 	public Set<Tree> trees = new HashSet<Tree>();
 	public Set<Flower> flowers = new HashSet<Flower>();
 
-
 	public HashMap<TreeType, Tree> treePrototypes = new HashMap<TreeType, Tree>();
 	public HashMap<FlowerType, Flower> flowerPrototypes = new HashMap<FlowerType, Flower>();
+
 
 	public Forrest() {
 		preparePrototypes();
 	}
 
+
+	/**
+	 * this method fills the prototypes maps for forrestobjects
+	 */
 	private void preparePrototypes() {
 		for (TreeType treeType : TreeType.values()) {
-			treePrototypes.put(treeType, new Tree(treeType));
+			treePrototypes.put(treeType, Tree.createPrototype(treeType));
 		}
 		for (FlowerType flowerType : FlowerType.values()) {
-			flowerPrototypes.put(flowerType, new Flower(flowerType));
+			flowerPrototypes.put(flowerType, Flower.createPrototype(flowerType));
 		}
 	}
 
+
+	/**
+	 * clones a prototyped tree and adds it to the forrestTrees
+	 * @param treeType the desired treetype eg. Eiche
+	 * @param quantity how many trees will be created
+	 */
 	public void addTreesToForrest(TreeType treeType, int quantity) {
-		for(int i = 0; i < quantity; i++) {
+		for (int i = 0; i < quantity; i++) {
 			trees.add(treePrototypes.get(treeType).clone());
 		}
 	}
 
+	/**
+	 * clones a prototyped flower and adds it to the forrestFlowers
+	 * @param flowerType the desired flowerType eg. Sonnenblume
+	 * @param quantity how many flowers will be created
+	 */
 	public void addFlowersToForrest(FlowerType flowerType, int quantity) {
-		for(int i = 0; i < quantity; i++) {
+		for (int i = 0; i < quantity; i++) {
 			flowers.add(flowerPrototypes.get(flowerType).clone());
 		}
 	}

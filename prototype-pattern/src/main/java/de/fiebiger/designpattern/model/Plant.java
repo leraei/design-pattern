@@ -1,6 +1,7 @@
 package de.fiebiger.designpattern.model;
 
 /**
+ * Baseclass for all existing Forrestplants
  * Created by tfiebige on 17.03.16.
  */
 public abstract class Plant implements Cloneable{
@@ -16,9 +17,6 @@ public abstract class Plant implements Cloneable{
 		}
 		return clone;
 	}
-
-	//public abstract Plant clone();
-
 
 	public int getAge() {
 		return age;

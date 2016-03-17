@@ -9,8 +9,12 @@ public class Flower extends Plant {
 	private String color;
 
 
-	public Flower(FlowerType type) {
+	private Flower(FlowerType type) {
 		this.type = type;
+	}
+
+	public static Flower createPrototype(FlowerType flowerType) {
+		return new Flower(flowerType);
 	}
 
 
